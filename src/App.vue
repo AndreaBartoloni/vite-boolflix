@@ -1,30 +1,34 @@
+<!-- APP.VUE  -->
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import card from './components/card.vue'
+import axios from 'axios'
+// import { apiKey } from "./apiKey.js"
+import searchBar from './components/searchBar.vue'
+
+
+
 
 
 export default{
   components: {
-    HelloWorld
-  }
+    searchBar,
+    card
+  },
+
+  data() {
+    return {
+      apiKey
+    }
+  },
 }
 </script>
 
 <template>
-
-  <HelloWorld />
+  <card/>
+  <searchBar />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>

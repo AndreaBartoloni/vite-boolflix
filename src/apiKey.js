@@ -1,10 +1,10 @@
-import axios from 'axios';
+//  IMPORT.AXIOS 
 
 const options = {
   method: 'GET',
   url: 'https://api.themoviedb.org/3/search/movie',
   params: {
-    query: encodeURI(this.quelDato),
+    query: "7a3513da966623deaaca3833b8ed2795",
     include_adult: 'false', 
     language: 'en-US', 
     page: '1'
