@@ -1,15 +1,21 @@
 <!-- SEARCH.VUE  -->
 <script>
 
-
+import { store } from "../store.js"
 
 export default{
-
+  emits: ['search'],
   name: "searchBar",
   data() {
     return {
-      apiKey
+      store,
       
+      
+    }
+  },
+  methods: {
+    search(){
+      this.$emit('search', this.store.searchMovie)
     }
   },
 }
@@ -17,7 +23,8 @@ export default{
 </script>
 
 <template>
-  ciao
+    <input v-model="store.searchMovie" @keyup.enter="$emit('search')" type="text">
+    <button @click="search">cerca</button>
 </template>
 
 <style scoped>
