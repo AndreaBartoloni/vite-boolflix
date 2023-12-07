@@ -6,6 +6,6 @@ export const store = reactive ({
   movieList: [],
   seriesList: [],
   searchMovie: "",
-  urlApi: 'https://api.themoviedb.org/3/search/movie'
-  
+  urlApi: 'https://api.themoviedb.org/3/search/movie',
+  urlSerie: 'https://api.themoviedb.org/3/search/tv'
 });

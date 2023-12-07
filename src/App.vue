@@ -48,7 +48,7 @@ export default{
 
       let richiestaSerie = {
         method: 'GET',
-        url: this.store.seriesList,
+        url: this.store.urlSerie,
         params: {
           query: this.store.searchMovie,
           include_adult: 'false', 
