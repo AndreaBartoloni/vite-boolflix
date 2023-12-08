@@ -5,6 +5,8 @@ import card from './components/card.vue'
 import axios from 'axios'
 import { store } from "./store.js"
 import searchBar from './components/searchBar.vue'
+import navBar from './components/navBar.vue'
+
 
 
 
@@ -13,7 +15,8 @@ import searchBar from './components/searchBar.vue'
 export default{
   components: {
     searchBar,
-    card
+    card,
+    navBar
   },
 
   data() {
@@ -71,6 +74,7 @@ export default{
 </script>
 
 <template>
+  <navBar/>
   <h1>Film</h1>
   <div class="container-big">
     <card v-for="(movie, index) in store.movieList" :key="index" :info="movie"/>

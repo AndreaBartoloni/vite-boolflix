@@ -25,6 +25,7 @@ export default{
 <template>
     <input v-model="store.searchMovie" @keyup.enter="$emit('search')" type="text">
     <button @click="search">cerca</button>
+    
 </template>
 
 <style scoped>
