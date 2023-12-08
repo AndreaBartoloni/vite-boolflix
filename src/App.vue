@@ -72,12 +72,23 @@ export default{
 
 <template>
   <h1>Film</h1>
-  <card v-for="(movie, index) in store.movieList" :key="index" :info="movie"/>
+  <div class="container-big">
+    <card v-for="(movie, index) in store.movieList" :key="index" :info="movie"/>
+  </div>
+  
   <h1>serie</h1>
-  <card v-for="(serie, index) in store.seriesList" :key="index" :info="serie"/>
+  <div class="container-big">
+    <card v-for="(serie, index) in store.seriesList" :key="index" :info="serie"/>
+  </div>
+  
   <searchBar @search="listaFilm"/>
 </template>
 
 <style scoped>
 
+.container-big{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 </style>
